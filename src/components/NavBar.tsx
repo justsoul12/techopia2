@@ -7,7 +7,7 @@ import logo from '../assets/Techopia.webp'
 const NavBar = () => {
   return (
     <HStack>
-        <Image src={logo} boxSize={'60px'}/>
+        <Image src={logo} boxSize={'60px'} margin={'10px'}/>
         <Text>NavBar</Text>
     </HStack>
   )
