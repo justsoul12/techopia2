@@ -7,9 +7,9 @@ const ColorModeSwitch = () => {
 
 
   return (
-    <HStack>
+    <HStack display={'flex'} flexDirection={'row'} alignItems={'center'}>
         <Switch colorScheme={'green'} isChecked={colorMode==='dark'} onChange={toggleColorMode}/>
-        <Text fontWeight={700}>{colorMode==='dark' ? 'Dark' : 'Light '} Mode</Text>
+        <Text fontWeight={700} marginTop={'25px'}>{colorMode==='dark' ? 'Dark' : 'Light '} Mode</Text>
     </HStack>
   )
 }
