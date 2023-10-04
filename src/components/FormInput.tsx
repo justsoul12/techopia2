@@ -6,13 +6,10 @@ import { Input , Stack, Text, InputGroup, InputRightElement, Button} from '@chak
 
 
 
-
-
-
 const schema = z.object({
     fullName: z.string().min(3,{message: 'full Name should be at least 3 Characters'}).max(50),
     email: z.string().min(3,{message:'Email required'}),
-    phoneNumber: z.number({invalid_type_error: 'phone number is required'}).min(0.01).max(100_000),
+    phoneNumber: z.number({invalid_type_error: 'password is required'}).min(0.01),
     
 })
 
@@ -75,7 +72,7 @@ const ExpenseForm = ({onSubmit}:Props) => {
       {errors.phoneNumber && <p className='text-danger'>{errors.phoneNumber.message}</p>}
         </div>
             
-        <Button colorScheme='telegram'>Login</Button>
+        <Button colorScheme='telegram' type='submit'>Login</Button>
         </Stack>
         
         
