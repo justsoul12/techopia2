@@ -3,6 +3,7 @@ import { useState} from 'react';
 import {z} from 'zod';
 import { useForm} from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod/src/zod.js';
+import HomePage from '../pages/HomePage';
 
 
 
@@ -72,7 +73,7 @@ const ExpenseForm = ({onSubmit}:Props) => {
       {errors.phoneNumber && <p className='text-danger'>{errors.phoneNumber.message}</p>}
         </div>
             
-        <Button colorScheme='telegram' type='submit'>Login</Button>
+        <Button colorScheme='telegram' type='submit'><a href="/form">Login</a></Button>
         </Stack>
         
         

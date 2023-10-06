@@ -11,13 +11,13 @@ const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      {index: true, element: <Form/>},
-      { index: true, element: <HomePage /> },
+      {  path:'/', index:true, element: <Form/>},
+      { path: '/form', index: true, element: <HomePage /> },
       { path: 'games/:slug', element: <GameDetailPage /> }
     ]
-  }
+  },
+  
 ]);
 
 export default router;
 
-// live a life like thug nigga

@@ -4,6 +4,7 @@ import { Grid, GridItem, Image, Show } from '@chakra-ui/react'
 import heroImage from '../assets/space-shuttle.webp'
 import logo from '../assets/Techopia.webp'
 import FormInput from '../components/FormInput'
+import HomePage from './HomePage'
 
 
 const Form = () => {
@@ -21,7 +22,7 @@ const Form = () => {
         <GridItem area='main' display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'space-between'} marginRight={10}>
             <Image src={logo} width={70} margin={10}  boxShadow={'0 0 10px #ccc'} borderRadius={9}/>
             <h2>Login</h2>
-            <FormInput onSubmit={()=> console.log('submited')}/>
+            <FormInput onSubmit={()=> <HomePage/> }/>
         </GridItem>
       </Grid>
     </>
