@@ -4,6 +4,7 @@ import GameDetailPage from "./pages/GameDetailPage";
 import HomePage from "./pages/HomePage";
 import Layout from "./pages/Layout";
 import Form from "./pages/Form";
+import Dashboard from './pages/Dashboard/DashLayout'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       {  path:'/', index:true, element: <Form/>},
       { path: '/form', index: true, element: <HomePage /> },
+      { path: '/dashboard', index: true, element: <Dashboard/>},
       { path: 'games/:slug', element: <GameDetailPage /> }
     ]
   },
