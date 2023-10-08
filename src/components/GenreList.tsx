@@ -7,51 +7,252 @@ import {
   ListItem,
   Spinner
 } from '@chakra-ui/react';
-import useGenres from '../hooks/useGenres';
-import getCroppedImageUrl from '../services/image-url';
-import useGameQueryStore from '../store';
+
 
 const GenreList = () => {
-  const { data, isLoading, error } = useGenres();
-  const selectedGenreId = useGameQueryStore(s => s.gameQuery.genreId);
-  const setSelectedGenreId = useGameQueryStore(s => s.setGenreId);
 
-  if (error) return null;
-
-  if (isLoading) return <Spinner />;
 
   return (
     <>
       <Heading fontSize="2xl" marginTop={9} marginBottom={3}>
-        Genres
+        Category
       </Heading>
       <List>
-        {data?.results.map((genre) => (
-          <ListItem key={genre.id} paddingY="5px">
+          <ListItem paddingY="5px">
             <HStack>
               <Image
                 boxSize="32px"
                 borderRadius={8}
                 objectFit="cover"
-                src={getCroppedImageUrl(genre.image_background)}
+                src='../src/assets/categoryImg/EarthGenres.jpg'
               />
               <Button
                 whiteSpace="normal"
                 textAlign="left"
-                fontWeight={
-                  genre.id === selectedGenreId
-                    ? 'bold'
-                    : 'normal'
-                }
-                onClick={() => setSelectedGenreId(genre.id)}
                 fontSize="md"
                 variant="link"
               >
-                {genre.name}
+                Earth Science
               </Button>
             </HStack>
           </ListItem>
-        ))}
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/PlanetGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Planetary Science
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/SunGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Heliophysics
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/AstrophysicsGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Astrophysics
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/AeroGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Aeronautics
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/FlightGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Human Spaceflight
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/SpaceTechGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Space Technology
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/RoboticsGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Space Exploration
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/AtmGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Atmospheric Science
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/AstrobiologyGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Astrobiology
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/PropGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Propulsion Systems
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/PowerGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Power Systems
+              </Button>
+            </HStack>
+          </ListItem>
+          <ListItem paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                objectFit="cover"
+                src='../src/assets/categoryImg/MaterialGenres.jpg'
+              />
+              <Button
+                whiteSpace="normal"
+                textAlign="left"
+                fontSize="md"
+                variant="link"
+              >
+                Material Science
+              </Button>
+            </HStack>
+          </ListItem>
+        
       </List>
     </>
   );
